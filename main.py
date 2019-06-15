@@ -15,7 +15,7 @@ def main():
     """
 
     if request.args:
-        url = request.args['url']
+        url: str = request.args['url']
         return render_template('index.html', url=url)
     else:
         return render_template('index.html')
@@ -51,11 +51,11 @@ def short():
     Returns:
         redirect -- just redirecting user to the main page with shortened URL sent to index page.
     """
-    url = request.form['url']
+    url: str = request.form['url']
     url_exists = db.checkUrl(url)
     if not url_exists:
-        shortened = generateURL()
-        shortened_id = shortened.split('/')[2]
+        shortened: str = generateURL()
+        shortened_id: str = shortened.split('/')[2]
         db.addEntry(shortened_id, url)
         return redirect(url_for('main', url=shortened))
     else:
