@@ -5,7 +5,7 @@ class Config(object):
     FLASK_SECRET: str = SECRET_KEY
     TEMPLATES_AUTO_RELOAD: bool = True
     DB: str = 'urls.db'
-    BASE_URL: str = 'localhost:5000'
+    BASE_URL: str = 'localhost:5000/shrt'
 
 class ProductionConfig(Config):
     DEVELOPMENT: bool = False
