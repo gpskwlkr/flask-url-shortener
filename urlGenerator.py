@@ -10,6 +10,12 @@ characterList = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 
 
 def generateURL():
+    """
+    Generates a random bunch of characters to use as ID
+    
+    Returns:
+        shortened_url [str] -- [Generated string used for ID later]
+    """
     url: str = Config.BASE_URL
     newurl = ''
     for i in range(5):

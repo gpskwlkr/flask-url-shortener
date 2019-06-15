@@ -9,8 +9,21 @@ app.config.from_object(Config)
 @app.route('/')
 @app.route('/<shortID>')
 def main(shortID=None):
+    """
+    Keyword Arguments:
+        shortID {str} -- Already generated ID for some URL. (default: {None})
+    
+    Returns:
+        redirect, or template. Depending on shortID existance in the URL.
+    """
     if shortID:
-        try: 
+        try:
+            '''
+            To make this moment clear.
+
+            urlGenerator() can generate an ID with only numbers in it.
+            So to make everything work perfect we're just checking is it so, or not, before fetching it's URL from database.
+            '''
             shortID = int(shortID)
             return redirect(db.getUrl(shortID))
         except:
@@ -24,6 +37,12 @@ def main(shortID=None):
 
 @app.route('/short', methods=['POST'])
 def short():
+    """
+    Action for form to shorten URLs.
+    
+    Returns:
+        [redirect] -- just redirecting user to the main page with shortened URL sent to index page.
+    """
     url = request.form['url']
     url_exists = db.checkUrl(url)
     if not url_exists:
