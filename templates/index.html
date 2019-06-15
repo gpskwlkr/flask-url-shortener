@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if url %}
+        <h1 id='url'>Your url is - <a href="http://{{url}}">{{url}}</a></h1>
+{% endif %}
+
+
+<header>
+    <h1>Super-Duper-Simple URL Shortener</h1>
+</header>
+
+<div class="container">
+    <form action="/short" method="POST">
+        <input type="text" name="url" id="urlInput" placeholder="Enter your URL">
+        <input type="submit" style="color: white; font-size: larger; background-color: black;" value="Shorten it!">
+    </form>
+</div>
+
+{% endblock %}

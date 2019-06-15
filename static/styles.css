@@ -1,0 +1,78 @@
+body {
+    background-color: #04276B;
+}
+
+h1 {
+    margin-top: 100px;
+    text-align: center;
+    color:white;
+}
+
+header {
+    color: white;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -180%)
+}
+
+form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input {
+    border-radius: 25px;
+    font-size: 20px;
+    color:white;
+    text-indent: 5px;
+}
+
+input[type="submit"] {
+    width: 150px;
+    height: 50px;
+}
+
+input[name="url"]{
+    transition: box-shadow .3s;
+    background-color : #010E24; 
+    width: 300px;
+    height: 40px;
+}
+
+input[name="url"]:hover {
+    box-shadow: 0 0 11px rgba(255, 255, 255, 0.3);
+}
+#submit {
+    color:white;
+}
+
+::-webkit-input-placeholder {
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+::-moz-placeholder {
+    text-transform: uppercase;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+:-ms-input-placeholder {
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 20px;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    text-indent: 2px;
+}
