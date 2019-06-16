@@ -6,6 +6,8 @@
 python main.py
 ```
 
+Go to localhost:5000.
+
 And that's it, everything is already set up for you !
 
 # How it works
